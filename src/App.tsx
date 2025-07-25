@@ -1,14 +1,25 @@
 import './App.css'
+import Menu from './components/Menu';
 
 function App() {
   
 
   return (
-    
-       <div>
-      <h1 style={{ fontFamily: 'Chakra Petch' }}>Texto con Chakra Petch</h1>
-      <p style={{ fontFamily: 'Chakra Petch' }}>Texto con Poppins</p>
-      <p style={{ fontFamily: 'Chakra Petch' }}>Texto con Arial</p>
+
+       <div  className="header">
+        <h1 style={{ fontFamily: 'Chakra Petch' }}>Jose Ramses Moreno</h1>
+        <h2>Software developer</h2>
+        <Menu />
+        <div className='simple-section'>
+          <h3>Basic Information </h3>
+        </div>
+         <div className='simple-line'></div>
+        <div className='nab-bar'>
+          <div className='first-info'>
+            <div className='about-me'>
+            </div>
+          </div>
+        </div>
     </div>
     
   )

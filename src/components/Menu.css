@@ -1,0 +1,27 @@
+.ul-1 {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 5px;
+  justify-content:start;
+}
+
+.ul-1 li {
+  background: #061122;
+  padding: 18px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ul-1 li:hover {
+  background: #0c1c3c;
+}
+
+.ul-1 li.active {
+  background: #00eaff;
+  color: black;
+  font-weight: bold;
+}
