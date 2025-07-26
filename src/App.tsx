@@ -1,5 +1,6 @@
 import './App.css'
 import Menu from './components/Menu';
+import About_Me from './components/About_Me';
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
           <h3>Basic Information </h3>
         </div>
          <div className='simple-line'></div>
+         <About_Me/>
         <div className='nab-bar'>
           <div className='first-info'>
             <div className='about-me'>
