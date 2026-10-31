@@ -1,0 +1,275 @@
+/* GRID PRINCIPAL */
+
+.fila-experience {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/* TARJETA CYBERPUNK */
+
+.experience-card {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+
+  background: #080d18;
+  color: #d9faff;
+
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 4px;
+
+  cursor: pointer;
+  isolation: isolate;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* CUADRÍCULA FUTURISTA */
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 240, 255, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 240, 255, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+/* RESPLANDOR EXTERIOR */
+
+.experience-card:hover,
+.experience-card.active {
+  transform: translateY(-7px);
+
+  border-color: #00f0ff;
+
+  box-shadow:
+    0 0 10px rgba(0, 240, 255, 0.3),
+    0 0 30px rgba(0, 240, 255, 0.12),
+    inset 0 0 20px rgba(0, 240, 255, 0.05);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.card-content {
+  position: relative;
+  z-index: 1;
+
+  padding: 28px;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s ease;
+}
+
+.card-label {
+  display: block;
+  margin-bottom: 25px;
+
+  color: #00f0ff;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.experience-card h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.experience-card p {
+  color: #a8bacb;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.card-action {
+  display: inline-block;
+  margin-top: 20px;
+
+  color: #ff2bd6;
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* CAPA HOLOGRÁFICA */
+
+.hologram {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 28px;
+
+  background: rgba(5, 12, 28, 0.97);
+
+  border-left: 2px solid #ff2bd6;
+
+  opacity: 0;
+  visibility: hidden;
+
+  clip-path: inset(0 0 100% 0);
+
+  transition:
+    clip-path 0.45s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* LÍNEAS DE ESCANEO */
+
+.hologram::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0;
+
+  width: 100%;
+  height: 25%;
+
+  background: linear-gradient(
+    transparent,
+    rgba(0, 240, 255, 0.12),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* ACTIVACIÓN */
+
+.experience-card.active .hologram {
+  opacity: 1;
+  visibility: visible;
+
+  clip-path: inset(0 0 0 0);
+}
+
+.experience-card.active .hologram::before {
+  animation: hologram-scan 1.2s ease-out;
+}
+
+.experience-card.active .card-content {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* TEXTOS HOLOGRÁFICOS */
+
+.hologram-status {
+  color: #00f0ff;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hologram h3 {
+  color: #ff2bd6;
+  text-shadow: 0 0 10px rgba(255, 43, 214, 0.35);
+}
+
+.hologram-footer {
+  color: #00f0ff;
+  font-family: monospace;
+  font-size: 0.65rem;
+  margin-top: 18px;
+  letter-spacing: 1px;
+}
+
+/* BARRA DE PROGRESO */
+
+.scan-progress {
+  height: 3px;
+  width: 100%;
+  margin-top: 15px;
+
+  background: rgba(0, 240, 255, 0.15);
+}
+
+.scan-progress-bar {
+  height: 100%;
+  width: 100%;
+
+  background: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.experience-card.active .scan-progress-bar {
+  animation: progress-scan 0.8s ease-out forwards;
+}
+
+/* ANIMACIONES */
+
+@keyframes hologram-scan {
+  from {
+    transform: translateY(-30%);
+  }
+
+  to {
+    transform: translateY(500%);
+  }
+}
+
+@keyframes progress-scan {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ACCESIBILIDAD */
+
+.experience-card:focus-visible {
+  outline: 2px solid #ff2bd6;
+  outline-offset: 4px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 700px) {
+  .fila-experience {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RESPETO A LAS PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .card-content,
+  .hologram {
+    transition: none;
+  }
+
+  .experience-card.active .hologram::before,
+  .experience-card.active .scan-progress-bar {
+    animation: none;
+  }
+}

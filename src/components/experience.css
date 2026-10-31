@@ -1,0 +1,235 @@
+
+
+.info1{
+    background: #061122;
+    color: white;
+    width: 50%;
+    height: 300px;
+    padding: 0 20px;   
+    align-items: center;
+    font-weight: 500;
+    clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+    margin-left: -1px; /* elimina líneas entre tabs */
+    margin-left: 50px;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-template-rows: 100px 100px;    /* Dos filas (solo para la segunda columna) */
+    gap: 10px; /* Espacio entre las secciones */
+    padding: 20px;
+    padding-left: 5%;
+}
+
+.seccion1-experience {
+    display: inline-block;
+    grid-column: 1;  /* Columna izquierda */
+    grid-row: 1 / span 2; /* Ocupar ambas filas en la primera columna */
+    height: 100%;
+    background: #02d7f2ed;
+    clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+}
+
+.seccion1-experience p{
+    color: #061122;
+}
+
+.seccion2-experience {
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #01677d;
+}
+
+.seccion3-experience {
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #01677d;
+}
+
+.seccion4-experience {
+    display: inline-block;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #01677d;
+}
+
+
+ .fila-experience {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .seccion_1-experience {
+      flex: 2;
+      margin-left: 20px;
+      padding: 10px;
+      background: #02d7f2ed;
+      clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+    }
+
+    .seccion_1-experience h3 {
+      color: #011327;
+    }
+
+    .seccion-dos-experience {
+      display: flex;
+      flex-direction: column; /* Para que los hijos se apilen en renglones */
+      gap: 10px;
+      background-color: transparent; /* Para que cada renglón tenga su color */
+    }
+
+    .subseccion_1-experience {
+      flex: 1;
+      padding: 10px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #01677d;
+    }
+
+     .subseccion_1-experience h3 {
+         color: #02d7f2;
+    }
+
+    .subseccion_2-experience {
+      flex: 1;
+      padding: 10px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #01677d;
+    }
+
+     .seccion_3-experience {
+      flex: 1;
+      padding: 10px;
+      background: #011327;
+      margin-right: 20px;
+      clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+    }
+
+     .seccion_3-experience h3 {
+      color: #02d7f2;
+    }
+
+
+
+/* Contenedor de las tarjetas */
+.fila-experience {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+  padding: 20px;
+  
+}
+
+/* Perspectiva 3D y contenedor */
+.experience-card {
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+  border-radius: 16px;
+  outline: none;
+}
+
+/* Animación de elevación */
+.experience-card:hover {
+  transform: translateY(-8px);
+}
+
+.experience-card {
+  transition: transform 0.3s ease;
+}
+
+/* Indicador visual al navegar con teclado */
+.experience-card:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 4px;
+}
+
+/* Elemento que gira */
+.experience-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.2, 0.75, 0.3, 1);
+}
+
+/* Girar al hacer clic */
+.experience-card.is-flipped .experience-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras de la tarjeta */
+.experience-card-front,
+.experience-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Parte frontal */
+.experience-card-front {
+  background: #061122;
+  color: #02d7f2;
+  border: 2px solid #061122;
+}
+
+/* Parte trasera */
+.experience-card-back {
+  background: #02d7f2;
+  color: #000000;
+  transform: rotateY(180deg);
+}
+
+/* Tipografía */
+.experience-card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+}
+
+.experience-card p {
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+/* Texto de ayuda */
+.card-hint {
+  margin-top: auto;
+  padding-top: 15px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Diseño para móviles */
+@media (max-width: 700px) {
+  .fila-experience {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card {
+    height: 320px;
+  }
+}
+
+/* Respetar preferencias de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .experience-card,
+  .experience-card-inner {
+    transition: none;
+  }
+}
