@@ -106,7 +106,7 @@
   display: inline-block;
   margin-top: 20px;
 
-  color: #ff2bd6;
+  color: #02d7f2;
   font-family: monospace;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -127,7 +127,7 @@
 
   background: rgba(5, 12, 28, 0.97);
 
-  border-left: 2px solid #ff2bd6;
+  border-left: 2px solid #02d7f2;
 
   opacity: 0;
   visibility: hidden;
@@ -189,8 +189,8 @@
 }
 
 .hologram h3 {
-  color: #ff2bd6;
-  text-shadow: 0 0 10px rgba(255, 43, 214, 0.35);
+  color: #02d7f2;
+  text-shadow: 0 0 10px #02d7f2;
 }
 
 .hologram-footer {
@@ -247,7 +247,7 @@
 /* ACCESIBILIDAD */
 
 .experience-card:focus-visible {
-  outline: 2px solid #ff2bd6;
+  outline: 2px solid #02d7f2;
   outline-offset: 4px;
 }
 

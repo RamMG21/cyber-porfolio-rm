@@ -1,114 +1,275 @@
-.info1{
-    background: #061122;
-    color: white;
-    width: 50%;
-    height: 300px;
-    padding: 0 20px;   
-    align-items: center;
-    font-weight: 500;
-    clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
-    margin-left: -1px; /* elimina líneas entre tabs */
-    margin-left: 50px;
-    
+/* GRID PRINCIPAL */
+
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 10px;
+  padding: 10px;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    grid-template-rows: 100px 100px;    /* Dos filas (solo para la segunda columna) */
-    gap: 10px; /* Espacio entre las secciones */
-    padding: 20px;
-    padding-left: 5%;
+/* TARJETA CYBERPUNK */
+
+.about-me .about-me-card {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+
+  background: #080d18;
+  color: #d9faff;
+
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  border-radius: 4px;
+
+  cursor: pointer;
+  isolation: isolate;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.seccion1 {
-    display: inline-block;
-    grid-column: 1;  /* Columna izquierda */
-    grid-row: 1 / span 2; /* Ocupar ambas filas en la primera columna */
-    height: 100%;
-    background: #02d7f2ed;
-    clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+/* CUADRÍCULA FUTURISTA */
+
+.about-me .about-me-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 240, 255, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 240, 255, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 20px 20px;
+  pointer-events: none;
 }
 
-.seccion1 p{
-    color: #061122;
+/* RESPLANDOR EXTERIOR */
+
+.about-me .about-me-card:hover,
+.about-me .about-me-card.active {
+  transform: translateY(-7px);
+
+  border-color: #00f0ff;
+
+  box-shadow:
+    0 0 10px rgba(0, 240, 255, 0.3),
+    0 0 30px rgba(0, 240, 255, 0.12),
+    inset 0 0 20px rgba(0, 240, 255, 0.05);
 }
 
-.seccion2 {
-    display: inline-block;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #01677d;
+/* CONTENIDO PRINCIPAL */
+
+.about-me .about-me-card-content {
+  position: relative;
+  z-index: 1;
+
+  padding: 28px;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.35s ease;
 }
 
-.seccion3 {
-    display: inline-block;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #01677d;
+.about-me .about-me-card-label {
+  display: block;
+  margin-bottom: 25px;
+
+  color: #00f0ff;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
 }
 
-.seccion4 {
-    display: inline-block;
-    width: 100%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #01677d;
+.about-me .about-me-card h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
 }
 
+.about-me .about-me-card p {
+  color: #a8bacb;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
 
- .fila {
-      display: flex;
-      gap: 10px;
-    }
-    
-    .seccion_1 {
-      flex: 2;
-      margin-left: 20px;
-      padding: 10px;
-      background: #02d7f2ed;
-      clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
-    }
+.about-me .about-me-card-action {
+  display: inline-block;
+  margin-top: 20px;
 
-    .seccion_1 h3 {
-      color: #011327;
-    }
+  color: #02d7f2;
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 
-    .seccion-dos {
-      display: flex;
-      flex-direction: column; /* Para que los hijos se apilen en renglones */
-      gap: 10px;
-      background-color: transparent; /* Para que cada renglón tenga su color */
-    }
+/* CAPA HOLOGRÁFICA */
 
-    .subseccion_1 {
-      flex: 1;
-      padding: 10px;
-      border-style: solid;
-      border-width: 2px;
-      border-color: #01677d;
-    }
+.about-me .about-me-hologram {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
 
-     .subseccion_1 h3 {
-         color: #02d7f2;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    .subseccion_2 {
-      flex: 1;
-      padding: 10px;
-      border-style: solid;
-      border-width: 2px;
-      border-color: #01677d;
-    }
+  padding: 28px;
 
-     .seccion_3 {
-      flex: 1;
-      padding: 10px;
-      background: #011327;
-      margin-right: 20px;
-      clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
-    }
+  background: rgba(5, 12, 28, 0.97);
 
-     .seccion_3 h3 {
-      color: #02d7f2;
-    }
+  border-left: 2px solid #02d7f2;
+
+  opacity: 0;
+  visibility: hidden;
+
+  clip-path: inset(0 0 100% 0);
+
+  transition:
+    clip-path 0.45s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* LÍNEAS DE ESCANEO */
+
+.about-me .about-me-hologram::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 0;
+
+  width: 100%;
+  height: 25%;
+
+  background: linear-gradient(
+    transparent,
+    rgba(0, 240, 255, 0.12),
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+/* ACTIVACIÓN */
+
+.about-me .about-me-card.active .about-me-hologram {
+  opacity: 1;
+  visibility: visible;
+
+  clip-path: inset(0 0 0 0);
+}
+
+.about-me .about-me-card.active .about-me-hologram::before {
+  animation: about-me-hologram-scan 1.2s ease-out;
+}
+
+.about-me .about-me-card.active .about-me-card-content {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* TEXTOS HOLOGRÁFICOS */
+
+.about-me .about-me-hologram-status {
+  color: #00f0ff;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.about-me .about-me-hologram h3 {
+  color: #02d7f2;
+  text-shadow: 0 0 10px #02d7f2;
+}
+
+.about-me .about-me-hologram-footer {
+  color: #00f0ff;
+  font-family: monospace;
+  font-size: 0.65rem;
+  margin-top: 18px;
+  letter-spacing: 1px;
+}
+
+/* BARRA DE PROGRESO */
+
+.about-me .about-me-scan-progress {
+  height: 3px;
+  width: 100%;
+  margin-top: 15px;
+
+  background: rgba(0, 240, 255, 0.15);
+}
+
+.about-me .about-me-scan-progress-bar {
+  height: 100%;
+  width: 100%;
+
+  background: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.about-me .about-me-card.active .about-me-scan-progress-bar {
+  animation: about-me-progress-scan 0.8s ease-out forwards;
+}
+
+/* ANIMACIONES */
+
+@keyframes about-me-hologram-scan {
+  from {
+    transform: translateY(-30%);
+  }
+
+  to {
+    transform: translateY(500%);
+  }
+}
+
+@keyframes about-me-progress-scan {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ACCESIBILIDAD */
+
+.about-me .about-me-card:focus-visible {
+  outline: 2px solid #02d7f2;
+  outline-offset: 4px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 700px) {
+  .about-me {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* RESPETO A LAS PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-me .about-me-card,
+  .about-me .about-me-card-content,
+  .about-me .about-me-hologram {
+    transition: none;
+  }
+
+  .about-me .about-me-card.active .about-me-hologram::before,
+  .about-me .about-me-card.active .about-me-scan-progress-bar {
+    animation: none;
+  }
+}
