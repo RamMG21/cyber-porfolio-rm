@@ -27,11 +27,12 @@
 }
 
 .timeline-year {
+  display: block;
   color: #00d9ff;
   font-family: 'Chakra Petch';
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
-  margin: 10px 0 15px;
+  margin-bottom: 12px;
 }
 
 .timeline-dot {
@@ -108,9 +109,6 @@
     padding: 15px;
   }
 
-  .timeline-year {
-    font-size: 14px;
-  }
 
   .timeline::before {
     left: 47px;
