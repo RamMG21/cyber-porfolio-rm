@@ -18,7 +18,8 @@ function ExperienceCard({
   const [flipped, setFlipped] = useState(false);
 
   return (
-
+    
+    <div data-aos="fade-up">
     <div
       className={`experience-card ${flipped ? "is-flipped" : ""}`}
       onClick={() => setFlipped(!flipped)}
@@ -48,6 +49,7 @@ function ExperienceCard({
           <span className="card-hint">Haz clic para volver ↻</span>
         </div>
       </div>
+    </div>
     </div>
   );
 }
@@ -87,10 +89,13 @@ export default function Experience() {
   ];
 
   return (
+    
     <div className="fila-experience">
       {experiences.map((experience, index) => (
         <ExperienceCard key={index} {...experience} />
       ))}
     </div>
+    
+    
   );
 }

@@ -119,3 +119,19 @@
      .seccion_3-certifications h3 {
       color: #02d7f2;
     }
+
+  .seccion-dos-certifications:hover {
+  background-color: #02d7f2;/* El nuevo color de fondo al pasar el mouse */
+    transform: translateY(-5px) scale(1.02); /* Sube 5px y se agranda un 2% */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra que simula flotación */
+}
+
+
+.seccion-dos-certifications h3 {
+  color: #02d7f2; /* Color inicial del texto */
+  transition: color 0.3s ease; /* Hace que el cambio de texto también sea suave */
+}
+
+.seccion-dos-certifications:hover h3 {
+  color: #000000; /* El texto cambia a blanco al mismo tiempo */
+}

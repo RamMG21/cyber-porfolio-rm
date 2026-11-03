@@ -8,6 +8,10 @@
   padding: 10px;
 }
 
+.about-me-featured {
+  grid-column: 1 / -1;
+}
+
 /* TARJETA CYBERPUNK */
 
 .about-me .about-me-card {
@@ -18,7 +22,7 @@
   background: #080d18;
   color: #d9faff;
 
-  border: 1px solid rgba(0, 240, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 4px;
 
   cursor: pointer;
@@ -59,7 +63,7 @@
 .about-me .about-me-card.active {
   transform: translateY(-7px);
 
-  border-color: #00f0ff;
+  border-color: #ffffff00;
 
   box-shadow:
     0 0 10px rgba(0, 240, 255, 0.3),
@@ -165,7 +169,6 @@
 .about-me .about-me-card.active .about-me-hologram {
   opacity: 1;
   visibility: visible;
-
   clip-path: inset(0 0 0 0);
 }
 

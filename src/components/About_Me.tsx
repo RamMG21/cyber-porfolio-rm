@@ -31,7 +31,7 @@ function AboutMeCard({
       aria-expanded={active}
     >
       <div className="about-me-card-content">
-        <span className="about-me-card-label">EDUCATION // 001</span>
+        <span className="about-me-card-label">Informacion//</span>
 
         <h3>{title}</h3>
 
@@ -40,13 +40,13 @@ function AboutMeCard({
         <p>{thesis}</p>
 
         <span className="about-me-card-action">
-          {active ? "[ CLOSE_INTERFACE ]" : "[ ACCESS_DATA ]"}
+          {active ? "[ CLOSE_INTERFACE ]" : "[ SELECCIONE_PARA_MAS_INFO ]"}
         </span>
       </div>
 
       <div className="about-me-hologram">
         <span className="about-me-hologram-status">
-          SYSTEM_ACCESS_GRANTED
+          _ACCESO
         </span>
 
         <h3>{title}</h3>
@@ -68,29 +68,38 @@ function AboutMeCard({
 export default function AboutMe() {
   const aboutMeItems = [
     {
-      title: "Autonomous University of Aguascalientes",
-      degree: "B.Eng. Intelligent Computing Engineering",
-      thesis:
-        "Undergraduate thesis: Integration of biological data preprocessing modules through software.",
+      title: "Perfil profesional",
+      degree: "Ingeniero en Computación Inteligente",
+      thesis: "Estudiante del Máster en Ciberseguridad en la Universidad de Salamanca.",
       details:
-        "Academic training in intelligent algorithms, mathematical models, software development and biological data processing.",
+        "Ingeniero en Computación Inteligente por la Universidad Autónoma de Aguascalientes del 2016 al 2021 y estudiante del Máster en Ciberseguridad en la Universidad de Salamanca del 2026 al 2027. Cuento con tres años de experiencia en proyectos tecnológicos y de investigación, así como conocimientos en desarrollo de software, inteligencia artificial y metodologías ágiles.",
     },
     {
-      title: "Artificial Intelligence",
-      degree: "Intelligent Systems",
-      thesis: "Algorithm development and mathematical modeling.",
+      title: "Universidad Autónoma de Aguascalientes",
+      degree: "Grado en Ingeniería en Computación Inteligente",
+      thesis:
+        "Trabajo de fin de grado: “Integración de módulos de preprocesamiento de datos biológicos a través del software UAA-PROT”.",
       details:
-        "Study of artificial intelligence algorithms and computational methods for solving complex problems.",
+        "Integrar los módulos de preprocesamiento para los análisis de datos bioinformáticas, de la metodología basado en mejores aciertos bidireccionales, mediante un desarrollo web para el procesamiento de la información incorporado al software UAA–PROT sobre un servidor web.",
+    },
+    {
+      title: "Universidad de salamanca",
+      degree: "Master en Ciberseguridad",
+      thesis: "Trabajo de fin de máster: “{Aun no definido}”.",
+      details:
+        " Proporcionar una formación avanzada e interdisciplinar sobre las amenazas y debilidades más comunes en los entornos digitales, sobre las técnicas y metodologías para prevenir, detectar y responder a incidentes de seguridad, así como las regulaciones y estándares nacionales e internacional relacionados con la ciberseguridad.",
     },
   ];
 
   return (
     <section className="about-me">
       {aboutMeItems.map((aboutMeItem, index) => (
-        <AboutMeCard
+        <div
           key={index}
-          {...aboutMeItem}
-        />
+          className={index === 0 ? "about-me-featured" : ""}
+        >
+          <AboutMeCard {...aboutMeItem} />
+        </div>
       ))}
     </section>
   );

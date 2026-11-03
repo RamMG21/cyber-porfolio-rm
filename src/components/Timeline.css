@@ -1,0 +1,118 @@
+/* TIMELINE PRINCIPAL */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+  position: relative;
+}
+
+/* EVENTO */
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  position: relative;
+  gap: 20px;
+  min-height: 200px;
+}
+
+/* MARCADOR Y AÑO */
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-year {
+  color: #00d9ff;
+  font-family: 'Chakra Petch';
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 15px;
+}
+
+.timeline-dot {
+  width: 13px;
+  height: 13px;
+  background: #00d9ff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #00d9ff;
+  z-index: 2;
+}
+
+/* LINEA VERTICAL CONTINUA */
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 60px;
+  top: 55px;
+  bottom: 30px;
+  width: 2px;
+  background: #00d9ff;
+}
+
+/* TARJETAS */
+
+.timeline-card {
+  background: #080d18;
+  border: 1px solid rgba(0, 217, 255, 0.35);
+  padding: 25px;
+  margin-bottom: 30px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.timeline-card:hover {
+  border-color: #00d9ff;
+  box-shadow: 0 0 18px rgba(0, 217, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.timeline-label {
+  color: #00d9ff;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.timeline-card h3 {
+  font-family: 'Chakra Petch';
+  margin: 12px 0;
+}
+
+.timeline-card p {
+  color: #a5b1c2;
+  line-height: 1.6;
+}
+
+.timeline-tech {
+  display: inline-block;
+  color: #00d9ff;
+  font-size: 12px;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .timeline-item {
+    grid-template-columns: 65px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .timeline-card {
+    padding: 15px;
+  }
+
+  .timeline-year {
+    font-size: 14px;
+  }
+
+  .timeline::before {
+    left: 47px;
+  }
+}

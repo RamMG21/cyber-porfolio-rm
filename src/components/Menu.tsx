@@ -1,20 +1,34 @@
 import { useState } from 'react';
-import './Menu.css'; // Opcional si usas CSS separado
+import './Menu.css';
 
 function Menu() {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const menuItems = ['About Me', 'Experience', 'Projects','Certifications'];
+  const menuItems = [
+    { name: 'About Me', id: 'basic-info' },
+    { name: 'Experience', id: 'experience' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Certifications', id: 'certifications' }
+  ];
+
+  const handleNavigation = (index: number, id: string) => {
+    setActiveIndex(index);
+
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
 
   return (
     <ul className="ul-1">
       {menuItems.map((item, index) => (
         <li
-          key={item}
+          key={item.id}
           className={index === activeIndex ? 'active' : ''}
-          onClick={() => setActiveIndex(index)}
+          onClick={() => handleNavigation(index, item.id)}
         >
-          {item}
+          {item.name}
         </li>
       ))}
     </ul>

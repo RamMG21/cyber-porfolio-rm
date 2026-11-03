@@ -1,9 +1,13 @@
 import './certifications.css';
 
 export default function Experience() {
+
+
+
   return (
-    
+    <div data-aos="fade-up-left">
     <div className="fila-certifications">
+      
    
 
     <div className="seccion seccion-dos-certifications">
@@ -34,6 +38,7 @@ export default function Experience() {
 
     
    
+    </div>
     </div>
   );
 }
