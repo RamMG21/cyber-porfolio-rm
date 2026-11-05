@@ -13,25 +13,26 @@ export default function Timeline() {
 
   const timelineItems: TimelineItem[] = [
     {
-      year: '2020',
-      title: 'Software Developer',
-      subtitle: 'UAA // Biochemistry Research',
-      technologies: 'NODE.JS // EXPRESS // EJS',
-      description: 'Development of a biological data processing platform.'
+      year: '2023 -> 2026',
+      title: 'Desarrollador React-Native',
+      subtitle: 'Desarrollador independiente // Rancho Cucamonga, California',
+      technologies: 'React.JS // AppWrite // TailwindCSS // Node.JS',
+      description: '- Participación activa en la fase de UX/UI, basada en los estándares de usabilidad y diseño más actuales.\n- Desarrollo del front-end utilizando Tailwind para la estandarización del diseño en las aplicaciones.\n- Análisis y desarrollo del back-end con Node.js, integrando servicios en la nube de AWS y Appwrite.'
     },
     {
-      year: '2021',
-      title: 'Full-Stack Developer',
-      subtitle: 'Web Application Development',
-      technologies: 'REACT // TYPESCRIPT // NODE.JS',
-      description: 'Development of web applications and software solutions.'
+      year: '2020 -> 2023',
+      title: 'Desarollador Full-Stack',
+      subtitle: 'Trabjo de instructor beca // Centro de ciencias de la computacion // Universidad autonoma de Aguascalientes',
+      technologies: 'JavaScript // Node.JS // EJS // Express.JS  // API REST',
+      description: '- Desarrollo de interfaz web con EJS, priorizando una experiencia intuitiva para usuarios no técnicos.\n- Implementación de servicios Back-End con Node.js y Express.js para la administración de scripts y procesamiento de análisis científicos.\n- Diseño de funcionalidades orientadas a facilitar el estudio de cadenas proteicas y la gestión de datos biológicos.'
+
     },
     {
-      year: '2026',
-      title: 'Master in Cybersecurity',
-      subtitle: 'Universidad de Salamanca',
+      year: '2017 -> 2019',
+      title: 'Analista de Calidad de Software',
+      subtitle: 'RAINDE Fleet Managment Systems',
       technologies: 'CYBERSECURITY // NETWORK SECURITY',
-      description: 'Specialized training in cybersecurity and information security.'
+      description: '- Detección, documentación y seguimiento de defectos en aplicaciones .NET, colaborando con el equipo de desarrollo para garantizar la calidad del software antes de su liberación.\n- Automatización de pruebas de regresión sobre componentes y servicios en C# y .NET, asegurando la estabilidad del código en cada ciclo de integración continua.'
     }
   ];
 
@@ -59,7 +60,7 @@ export default function Timeline() {
               {item.technologies}
             </span>
 
-            <p>{item.description}</p>
+            <p className="timeline-description">{item.description}</p>
           </div>
 
         </article>

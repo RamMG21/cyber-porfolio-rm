@@ -1,10 +1,11 @@
 import './App.css'
 import Menu from './components/Menu';
 import About_Me from './components/About_Me';
-import Experience from './components/experience';
+//import Experience from './components/experience';
 import Certifications from './components/certifications';
 import Projects from './components/projects';
 import Timeline from './components/Timeline';
+import Voluntariado from './components/voluntariado';
 
 
 function App() {
@@ -30,6 +31,13 @@ function App() {
   <div className="simple-line"></div>
   <About_Me />
 
+  <div className="simple-section" id="certifications">
+    <h3>Certifications</h3>
+  </div>
+
+  <div className="simple-line"></div>
+  <Certifications />
+
   <div className="simple-section" id="experience">
     <h3>Experience</h3>
   </div>
@@ -37,22 +45,36 @@ function App() {
   <div className="simple-line"></div>
   <Timeline />
 
-  <div className="simple-line"></div>
-  <Experience />
 
-  <div className="simple-section" id="certifications">
-    <h3>Certifications</h3>
-  </div>
-  <div className="simple-line"></div>
-  <Certifications />
+  {/*<div className="simple-line"></div>
+  <Experience /> */}
+
+  
+  
 
   <div className="simple-section" id="projects">
-    <h3>Projects</h3>
+    <h3>Proyectos</h3>
   </div>
   <div className="simple-line"></div>
   <Projects />
 
-</div>
+<div className="simple-section" id="projects">
+    <h3>Voluntariado</h3>
+  </div>
+  <div className="simple-line"></div>
+  <Voluntariado />
+
+
+  <div className="simple-section" id="projects">
+    <h3>Contacto y Redes</h3>
+  </div>
+  <div className="simple-line"></div>
+  
+
+
+  </div>
+
+  
     
   )
 }

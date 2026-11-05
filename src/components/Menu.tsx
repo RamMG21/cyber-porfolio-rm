@@ -5,10 +5,10 @@ function Menu() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const menuItems = [
-    { name: 'About Me', id: 'basic-info' },
-    { name: 'Experience', id: 'experience' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Certifications', id: 'certifications' }
+    { name: 'Informacion', id: 'basic-info' },
+    { name: 'Experiencia', id: 'experience' },
+    { name: 'Proyectos', id: 'projects' },
+    { name: 'Certificaciones', id: 'certifications' }
   ];
 
   const handleNavigation = (index: number, id: string) => {

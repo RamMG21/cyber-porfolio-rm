@@ -1,0 +1,114 @@
+ .info1{
+    background: #061122;
+    color: white;
+    width: 50%;
+    height: 300px;
+    padding: 0 20px;   
+    align-items: center;
+    font-weight: 500;
+    clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+    margin-left: -1px; /* elimina líneas entre tabs */
+    margin-left: 50px;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-template-rows: 100px 100px;    /* Dos filas (solo para la segunda columna) */
+    gap: 10px; /* Espacio entre las secciones */
+    padding: 20px;
+    padding-left: 5%;
+}
+
+.seccion1 {
+    display: inline-block;
+    grid-column: 1;  /* Columna izquierda */
+    grid-row: 1 / span 2; /* Ocupar ambas filas en la primera columna */
+    height: 100%;
+    background: #02d7f2ed;
+    clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+}
+
+.seccion1 p{
+    color: #061122;
+}
+
+.seccion2 {
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #01677d;
+}
+
+.seccion3 {
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #01677d;
+}
+
+.seccion4 {
+    display: inline-block;
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #01677d;
+}
+
+
+ .fila {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .seccion_1 {
+      flex: 2;
+      margin-left: 20px;
+      padding: 10px;
+      background: #02d7f2ed;
+      clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+    }
+
+    .seccion_1 h3 {
+      color: #011327;
+    }
+
+    .seccion-dos {
+      display: flex;
+      flex-direction: column; /* Para que los hijos se apilen en renglones */
+      gap: 10px;
+      background-color: transparent; /* Para que cada renglón tenga su color */
+    }
+
+    .subseccion_1 {
+      flex: 1;
+      padding: 10px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #01677d;
+    }
+
+     .subseccion_1 h3 {
+         color: #02d7f2;
+    }
+
+    .subseccion_2 {
+      flex: 1;
+      padding: 10px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #01677d;
+    }
+
+     .seccion_3 {
+      flex: 1;
+      padding: 10px;
+      background: #011327;
+      margin-right: 20px;
+      clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+    }
+
+     .seccion_3 h3 {
+      color: #02d7f2;
+    }
