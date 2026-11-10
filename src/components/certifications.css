@@ -92,8 +92,9 @@
       border-color: #01677d;
     }
 
-     .subseccion_1-certifications h3 {
-         color: #02d7f2;
+     .subseccion_1-certifications h2 {
+         color: #fcfcfc;
+         font-size: 20px;
     }
 
     .subseccion_2-certifications h3 {
@@ -134,4 +135,42 @@
 
 .seccion-dos-certifications:hover h3 {
   color: #000000; /* El texto cambia a blanco al mismo tiempo */
+}
+
+.seccion-dos-certifications:hover h2 {
+  color: #000000; /* El texto cambia a blanco al mismo tiempo */
+  transition: color 0.3s ease;
+}
+
+.seccion-dos-certifications:hover p {
+  color: #000000; /* El texto cambia a blanco al mismo tiempo */
+}
+
+.seccion-dos-certifications:hover .btn-credentials {
+  background-color: #000000; /* El fondo del botón cambia a negro */
+  color: #00d9ff; /* El texto cambia a blanco al mismo tiempo */
+}
+
+.btn-credentials {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  color: #00d9ff;
+  border: 1px solid #00d9ff;
+  background: transparent;
+
+  font-family: 'Chakra Petch';
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  transition: all 0.5s ease;
+}
+
+.btn-credentials:hover {
+  background: #000000;
+  color: #080d18;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
 }

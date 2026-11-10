@@ -7,8 +7,9 @@ function Menu() {
   const menuItems = [
     { name: 'Informacion', id: 'basic-info' },
     { name: 'Experiencia', id: 'experience' },
+    { name: 'Certificaciones', id: 'certifications' },
     { name: 'Proyectos', id: 'projects' },
-    { name: 'Certificaciones', id: 'certifications' }
+    { name: 'Voluntariado', id: 'voluntariado' }
   ];
 
   const handleNavigation = (index: number, id: string) => {

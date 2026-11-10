@@ -31,6 +31,13 @@ function App() {
   <div className="simple-line"></div>
   <About_Me />
 
+  <div className="simple-section" id="experience">
+    <h3>Experience</h3>
+  </div>
+
+  <div className="simple-line"></div>
+  <Timeline />
+
   <div className="simple-section" id="certifications">
     <h3>Certifications</h3>
   </div>
@@ -38,12 +45,7 @@ function App() {
   <div className="simple-line"></div>
   <Certifications />
 
-  <div className="simple-section" id="experience">
-    <h3>Experience</h3>
-  </div>
-
-  <div className="simple-line"></div>
-  <Timeline />
+  
 
 
   {/*<div className="simple-line"></div>
@@ -58,7 +60,7 @@ function App() {
   <div className="simple-line"></div>
   <Projects />
 
-<div className="simple-section" id="projects">
+<div className="simple-section" id="voluntariado">
     <h3>Voluntariado</h3>
   </div>
   <div className="simple-line"></div>

@@ -47,7 +47,7 @@ export default function Timeline() {
             <span className="timeline-dot"></span>
           </div>
 
-          <div className="timeline-card">
+          <div className={`timeline-card${index <= 2 ? ' timeline-card--with-icons' : ''}`}>
             <span className="timeline-label">
               EXPERIENCE // 00{index + 1}
             </span>
@@ -61,6 +61,24 @@ export default function Timeline() {
             </span>
 
             <p className="timeline-description">{item.description}</p>
+
+            {index === 0 && (
+  <div className="timeline-icons">
+    <img src="/img/logos1.png" alt="React, Appwrite, Tailwind y Node.js" />
+  </div>
+)}
+
+{index === 1 && (
+  <div className="timeline-icons">
+    <img src="/img/logos02.png" alt="JavaScript, Node.js, EJS, Express y API REST" />
+  </div>
+)}
+
+{index === 2 && (
+  <div className="timeline-icons">
+    <img src="/img/logos3.png" alt="CYBERSECURITY, NETWORK SECURITY" />
+  </div>
+)}
           </div>
 
         </article>

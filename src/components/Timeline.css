@@ -63,12 +63,29 @@
 /* TARJETAS */
 
 .timeline-card {
-  background: #080d18;
-  border: 1px solid rgba(0, 217, 255, 0.35);
+  background: #080d1800;
+  border: 4px solid rgba(0, 217, 255, 0.35);
   padding: 25px;
   margin-bottom: 30px;
   color: white;
   transition: 0.3s ease;
+}
+
+.timeline-card--with-icons {
+  position: relative;
+}
+
+.timeline-icons {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 180px;
+}
+
+.timeline-icons img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .timeline-card:hover {
@@ -104,17 +121,14 @@
 /* RESPONSIVE */
 
 @media (max-width: 600px) {
-  .timeline-item {
-    grid-template-columns: 65px minmax(0, 1fr);
-    gap: 10px;
+  .timeline-icons {
+    top: 15px;
+    right: 15px;
+    gap: 8px;
   }
 
-  .timeline-card {
-    padding: 15px;
-  }
-
-
-  .timeline::before {
-    left: 47px;
+  .timeline-icons img {
+    width: 28px;
+    height: 28px;
   }
 }

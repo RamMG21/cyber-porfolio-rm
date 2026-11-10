@@ -60,6 +60,7 @@
  .fila {
       display: flex;
       gap: 10px;
+      padding-top: 20px;
     }
     
     .seccion_1 {
@@ -70,8 +71,20 @@
       clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
     }
 
-    .seccion_1 h3 {
+   
+
+    .titulo h3{
+      color: #000000;
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 1.5rem;
+    }
+
+      .seccion_1 h2 {
       color: #011327;
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 1.5rem;
     }
 
     .seccion-dos {
@@ -84,20 +97,15 @@
     .subseccion_1 {
       flex: 1;
       padding: 10px;
-      border-style: solid;
-      border-width: 2px;
-      border-color: #01677d;
     }
 
      .subseccion_1 h3 {
-         color: #02d7f2;
+         color: #ffffff;
     }
 
     .subseccion_2 {
       flex: 1;
       padding: 10px;
-      border-style: solid;
-      border-width: 2px;
       border-color: #01677d;
     }
 
@@ -112,3 +120,62 @@
      .seccion_3 h3 {
       color: #02d7f2;
     }
+
+
+.fila {
+  display: flex;
+  gap: 20px; /* Espacio horizontal entre las 3 columnas */
+  align-items: stretch; /* Hace que las 3 columnas tengan la misma altura */
+}
+
+/* Regla compartida para las 3 columnas principales */
+.seccion_1,
+.seccion-dos,
+.seccion_3 {
+  flex: 1; /* Divide el ancho en 3 partes iguales */
+  display: flex;
+  flex-direction: column;
+}
+
+.seccion_1 {
+  background: #02d7f2ed;
+  clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+}
+
+.seccion_3 {
+  background: #011327;
+  clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+}
+
+
+
+/* Estilos visuales para tus cajas individuales */
+
+
+.subseccion_1,
+.subseccion_2 {
+  background-color: #080d18;
+  padding: 20px;
+  clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
+}
+
+/* Configuración específica para la columna central con dos elementos */
+.seccion-dos {
+  gap: 20px; /* Espacio vertical entre subseccion_1 y subseccion_2 */
+}
+
+/* Hace que ambas subsecciones repartan el alto disponible de forma equitativa */
+.subseccion_1,
+.subseccion_2 {
+  flex: 1;
+}
+
+.subseccion_1 h2 {
+  color: #02d7f2;
+  font-size: 20px;
+}
+
+.subseccion_2 h2 {
+  color: #02d7f2;
+  font-size: 20px;
+}
