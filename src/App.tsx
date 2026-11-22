@@ -6,6 +6,7 @@ import Certifications from './components/certifications';
 import Projects from './components/projects';
 import Timeline from './components/Timeline';
 import Voluntariado from './components/voluntariado';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -67,10 +68,11 @@ function App() {
   <Voluntariado />
 
 
-  <div className="simple-section" id="projects">
+  <div className="simple-section" id="contact">
     <h3>Contacto y Redes</h3>
   </div>
   <div className="simple-line"></div>
+  <Contact />
   
 
 

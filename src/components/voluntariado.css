@@ -26,12 +26,12 @@
     grid-column: 1;  /* Columna izquierda */
     grid-row: 1 / span 2; /* Ocupar ambas filas en la primera columna */
     height: 100%;
-    background: #02d7f2ed;
+    background: #011327;
     clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
 }
 
 .seccion1 p{
-    color: #061122;
+    color: #ffffff;
 }
 
 .seccion2 {
@@ -66,25 +66,27 @@
     .seccion_1 {
       flex: 2;
       margin-left: 20px;
-      padding: 10px;
-      background: #02d7f2ed;
+      padding: 20px 24px;
+      background: #02d7f2;
       clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
     }
 
    
 
     .titulo h3{
-      color: #000000;
+      color: #ffffff;
+      font-weight: bold;
       text-align: justify;
       text-justify: inter-word;
-      font-size: 1.5rem;
+      font-size: 1.15rem;
     }
 
       .seccion_1 h2 {
-      color: #011327;
+      color: #02d7f2;
       text-align: justify;
       text-justify: inter-word;
-      font-size: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .seccion-dos {
@@ -138,7 +140,7 @@
 }
 
 .seccion_1 {
-  background: #02d7f2ed;
+  background: #011327;
   clip-path: polygon(10px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 10px);
 }
 

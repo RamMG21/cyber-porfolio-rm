@@ -64,19 +64,19 @@ export default function Timeline() {
 
             {index === 0 && (
   <div className="timeline-icons">
-    <img src="/img/logos1.png" alt="React, Appwrite, Tailwind y Node.js" />
+    <img src={`${import.meta.env.BASE_URL}img/logos1.png`} alt="React, Appwrite, Tailwind y Node.js" />
   </div>
 )}
 
 {index === 1 && (
   <div className="timeline-icons">
-    <img src="/img/logos02.png" alt="JavaScript, Node.js, EJS, Express y API REST" />
+    <img src={`${import.meta.env.BASE_URL}img/logos02.png`} alt="JavaScript, Node.js, EJS, Express y API REST" />
   </div>
 )}
 
 {index === 2 && (
   <div className="timeline-icons">
-    <img src="/img/logos3.png" alt="CYBERSECURITY, NETWORK SECURITY" />
+    <img src={`${import.meta.env.BASE_URL}img/logos3.png`} alt="CYBERSECURITY, NETWORK SECURITY" />
   </div>
 )}
           </div>

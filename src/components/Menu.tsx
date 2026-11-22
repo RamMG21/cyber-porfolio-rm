@@ -9,7 +9,8 @@ function Menu() {
     { name: 'Experiencia', id: 'experience' },
     { name: 'Certificaciones', id: 'certifications' },
     { name: 'Proyectos', id: 'projects' },
-    { name: 'Voluntariado', id: 'voluntariado' }
+    { name: 'Voluntariado', id: 'voluntariado' },
+    { name: 'Contacto', id: 'contact' }
   ];
 
   const handleNavigation = (index: number, id: string) => {
