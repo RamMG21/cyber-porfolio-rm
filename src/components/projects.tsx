@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./projects.css";
 
 type ExperienceCardProps = {
@@ -14,22 +13,8 @@ function ExperienceCard({
   thesis,
   details,
 }: ExperienceCardProps) {
-  const [active, setActive] = useState(false);
-
   return (
-    <article
-      className={`experience-card ${active ? "active" : ""}`}
-      onClick={() => setActive(!active)}
-      onKeyDown={(event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          setActive(!active);
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      aria-expanded={active}
-    >
+    <article className="experience-card active">
       <div className="card-content">
         <span className="card-label">EDUCATION // 001</span>
 
@@ -40,7 +25,7 @@ function ExperienceCard({
         <p>{thesis}</p>
 
         <span className="card-action">
-          {active ? "[ CLOSE_INTERFACE ]" : "[ ACCESS_DATA ]"}
+          [ CLOSE_INTERFACE ]
         </span>
       </div>
 
@@ -68,12 +53,12 @@ function ExperienceCard({
 export default function Experience() {
   const experiences = [
     {
-      title: "Autonomous University of Aguascalientes",
+      title: "Visa Climate Tech Hackathon 2024",
       degree: "B.Eng. Intelligent Computing Engineering",
       thesis:
-        "Undergraduate thesis: Integration of biological data preprocessing modules through software.",
+        "Participación en el Visa Climate Tech Hackathon 2024, una iniciativa internacional de innovación tecnológica enfocada en desarrollar soluciones digitales que contribuyan a la sostenibilidad ambiental. El evento planteó el uso de datos financieros, tecnologías digitales y herramientas de análisis para fomentar hábitos de consumo responsables, mejorar la eficiencia energética e impulsar modelos de economía circular. La experiencia permitió fortalecer habilidades de resolución de problemas, innovación, colaboración multidisciplinaria y desarrollo de soluciones tecnológicas con impacto ambiental.",
       details:
-        "Academic training in intelligent algorithms, mathematical models, software development and biological data processing.",
+        "Participación en el Visa Climate Tech Hackathon 2024, una iniciativa internacional de innovación tecnológica enfocada en desarrollar soluciones digitales que contribuyan a la sostenibilidad ambiental. El evento planteó el uso de datos financieros, tecnologías digitales y herramientas de análisis para fomentar hábitos de consumo responsables, mejorar la eficiencia energética e impulsar modelos de economía circular. La experiencia permitió fortalecer habilidades de resolución de problemas, innovación, colaboración multidisciplinaria y desarrollo de soluciones tecnológicas con impacto ambiental.",
     },
     {
       title: "Artificial Intelligence",

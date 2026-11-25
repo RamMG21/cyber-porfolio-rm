@@ -23,11 +23,6 @@
 
   cursor: pointer;
   isolation: isolate;
-
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
 }
 
 /* CUADRÍCULA FUTURISTA */
@@ -74,10 +69,6 @@
   z-index: 1;
 
   padding: 28px;
-
-  transition:
-    opacity 0.25s ease,
-    transform 0.35s ease;
 }
 
 .card-label {
@@ -133,11 +124,6 @@
   visibility: hidden;
 
   clip-path: inset(0 0 100% 0);
-
-  transition:
-    clip-path 0.45s ease,
-    opacity 0.3s ease,
-    visibility 0.3s ease;
 }
 
 /* LÍNEAS DE ESCANEO */
@@ -167,10 +153,6 @@
   visibility: visible;
 
   clip-path: inset(0 0 0 0);
-}
-
-.experience-card.active .hologram::before {
-  animation: hologram-scan 1.2s ease-out;
 }
 
 .experience-card.active .card-content {
@@ -223,25 +205,7 @@
 }
 
 .experience-card.active .scan-progress-bar {
-  animation: progress-scan 0.8s ease-out forwards;
-}
-
-/* ANIMACIONES */
-
-@keyframes hologram-scan {
-  from {
-    transform: translateY(-30%);
-  }
-
-  to {
-    transform: translateY(500%);
-  }
-}
-
-@keyframes progress-scan {
-  to {
-    transform: scaleX(1);
-  }
+  transform: scaleX(1);
 }
 
 /* ACCESIBILIDAD */
